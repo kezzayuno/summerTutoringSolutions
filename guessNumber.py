@@ -1,4 +1,3 @@
-# Alinn's Work
 # should have random imported
 import random
 
