@@ -70,7 +70,7 @@ class Student(Person):  # inheritance, polymorphism
 
 KC = Person('Kezziah', 'Salmon')  # <variable> = <expression>
 KC.CatchPhase()
-print(KC.favouriteFood)
+print("\n" + KC.favouriteFood + "\n")
 # print(KC.name)
 
 Bryn = Student('Bryn', 'Chicken')  # uses the Person attributes = inheritance
@@ -82,45 +82,43 @@ D = 123
 # string
 D = "123"  # or '123'
 D = D + "456" + "789"  # concatenation
-print(D)
+print("\nThis is the new value of D:", D)
 
-# combining strings using ','
+# prints as tuple
 E = '123','456','789'
-print(E)
+print("\nThis is how E is printed:", E)
 
 # combining strings using .join()
-F = 'ABC'.join(E)
-print(F)
+F = ' ABC '.join(E)
+print("\nThis is what F looks like after joining E:", F)
 
 # No Aliasing:
 G = []
 H = []
-print(G != H)  # bool, should be True because they have the same value
-print(id(G))
-print(id(H))
+print("Are G and H equal to each other:", str(G != H) + '.', "This is G's id {} and H's id {}.".format(id(G), id(H)))
 # Aliasing
 B = 0
 A = []
 A = B
-print(A == B)
+print("Are A and B equal: " + str(A == B) + ".")
 # except Exception as e:
 #   ...
 
 # list
 aList = [1, 2, 3]
-print(aList[0])
+print("What is at the 0th element of aList:", aList[0])
 # tuple
 aTuple = (1, 2, 3)
-print(aTuple[2])
+print("What is at the 2nd element of aTuple:", aTuple[2])
 # dictionary
 aDict = {'A': 1, 'B': 2, 'C': 3}
-print(aDict['B'])
+print("What value is stored in key 'B':", aDict['B'])
 
 # for debugging:
 W = ['fizz', 'buzz', 'fizz', 'buzz']
 n = 0
 for i in range(4):
     n += 1
-    W = W[:1]
+    W = W[1:]
 print(W)
 print(n)
