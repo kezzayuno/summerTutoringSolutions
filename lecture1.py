@@ -1,25 +1,25 @@
 # # str formatting
 # print("The Orangutan loves the coconut.")  # less flexible compared to...
-# animal = 'Orangutan'
-# food = 'coconut'
+# animal = 'Dog'
+# food = 'chicken'
 # print("The %s loves the %s." % (animal, food))
 # # What if I want to change the animal?
 # print()
 # # More concrete example...
 # for i in range(3):
-#     print('The number is: {:d}'.format(i))  # the placeholder allows change to a certain argument
+#     print('The number is: {:^05}'.format(i))  # the placeholder allows change to a certain argument
 # # What if we want to make a float point with a certain amount of digits after the decimal point? {.2f}
 # # What about pre-fillers? 05 Left-skew <, right-skew >? Width 5?
 # print()
 # for i in range(3):  # this is equivalent
 #     print('The number is: %d' % (i))
-# # Center skew? Must go to format() or use str.center(<width>)
+# # Center skew? Must go to format() ^ or use str.center(<width>)
 
 
 # # for loops
 # dict1 = {'A': 1, 'B': 2, 'C': 3}
 # list1 = ['A', 'B', 'C']
-# for i in dict1.items(): # what about .keys() and .values()
+# for i in dict1.values(): # what about .keys() and .values()
 #     print(i, end='')  # removes the new line (\n)
 # print('\n')
 # for i in list1:  # prints the items themselves
@@ -30,7 +30,6 @@
 # print()
 # for i in range(len(list1)):
 #     print(list1[i])  # using index number to get the item in the container
-#
 # # nested for loops
 # for i in range(3):  # How would you use this to make a grid? If this is a grid: [] and there are rows [[], [], []]
 #     for n in range(2):
@@ -91,16 +90,16 @@
 #     print('Woops.')
 
 
-# # side effect: is it mutable or not?
-# A = [1, 2, 3]
-# print(A)
-# def foo3(A):
-#     A.append(4)  # no return statement and no assigned variable catch the result and yet...
-# foo3(A)
-# print(A)
-# B = '123'
-# print(B)
-# def foo4(B):
-#     B + '4'
-# foo4(B)
-# print(B)
+# side effect: is it mutable or not?
+A = [1, 2, 3]
+print(A)
+def foo3(A):
+    A.append(4)  # no return statement and no assigned variable catch the result and yet...
+foo3(A)
+print(A)
+B = '123'
+print(B)
+def foo4(B):
+    B + '4'
+B = foo4(B)
+print(B)
