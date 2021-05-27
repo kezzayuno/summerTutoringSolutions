@@ -1,9 +1,9 @@
 board = []
 for row in range(4):
-    row = []
+    rowBoard = []
     for col in range(3):
-        row.append(col)
-    board.append(row)
+        rowBoard.append(col)
+    board.append(rowBoard)
 
 for row in board:
     for col in row:

@@ -1,4 +1,6 @@
 choice = input("Would you like to play? (Y/N): > ")
+while choice not in ['y', 'Y', 'n', 'N']:
+    choice = input("Sorry, that is an invalid request.\nWould you like to play? (Y/N): > ")
 givenPoints = []
 
 while choice.lower() == 'y':
